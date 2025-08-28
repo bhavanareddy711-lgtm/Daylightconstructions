@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact Daylight Construction — Request a Quote (Bengaluru)</title>
+  <meta name="description" content="Contact Daylight Construction for a free site assessment and quote. Call 9900613038 or request a quote online." />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header"><div class="container header-inner"><div class="logo"><a href="/">Daylight Construction</a></div></div></header>
+
+  <main class="container contact-page">
+    <h1>Contact & Request a Quote</h1>
+    <p>Call us: <a href="tel:+919900613038">9900613038</a> or fill the form below.</p>
+
+    <!-- Formspree example: replace action with your endpoint or server route -->
+    <form id="quoteForm" class="contact-form" action="https://formspree.io/f/yourFormId" method="POST">
+      <label for="name">Name *</label>
+      <input id="name" name="name" required />
+
+      <label for="phone">Phone *</label>
+      <input id="phone" name="phone" type="tel" required />
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" />
+
+      <label for="projectType">Project type</label>
+      <select id="projectType" name="projectType">
+        <option>New home construction</option>
+        <option>Renovation</option>
+        <option>Project management</option>
+        <option>Interiors</option>
+      </select>
+
+      <label for="locality">Project location (Bengaluru locality)</label>
+      <input id="locality" name="locality" placeholder="e.g., Koramangala, Whitefield" />
+
+      <label for="budget">Estimated budget</label>
+      <select id="budget" name="budget">
+        <option>Under ₹50L</option>
+        <option>₹50L–₹1Cr</option>
+        <option>₹1Cr–₹2Cr</option>
+        <option>Above ₹2Cr</option>
+      </select>
+
+      <label for="message">Brief description</label>
+      <textarea id="message" name="message" rows="4"></textarea>
+
+      <label for="upload">Upload blueprint / photo (optional)</label>
+      <input id="upload" name="upload" type="file" accept="image/*,.pdf" />
+
+      <div class="consent">
+        <input id="consent" name="consent" type="checkbox" required />
+        <label for="consent">I consent to Daylight Construction contacting me regarding my enquiry.</label>
+      </div>
+
+      <button type="submit" class="btn-primary">Submit Request</button>
+    </form>
+
+    <script>
+      // Basic clientside feedback
+      document.getElementById('quoteForm').addEventListener('submit', function(e){
+        // show quick clientside confirmation (actual submission handled by Formspree or server)
+        alert('Thanks — your request was submitted. We will contact you shortly.');
+      });
+    </script>
+
+  </main>
+
+  <footer class="site-footer"><div class="container"><small>© Daylight Construction</small></div></footer>
+</body>
+</html>
