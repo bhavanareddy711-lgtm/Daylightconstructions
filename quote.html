@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Request Free Quote — Daylight Construction</title>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Request Free Quote</h1>
+    <p>Short form for mobile-first capture.</p>
+    <form action="https://formspree.io/f/yourFormId" method="POST" class="quote-short">
+      <label for="qname">Name</label><input id="qname" name="name" required />
+      <label for="qphone">Phone</label><input id="qphone" name="phone" required />
+      <label for="qtype">Project type</label>
+      <select id="qtype" name="projectType"><option>New Home</option><option>Renovation</option></select>
+      <label for="qbudget">Budget</label>
+      <select id="qbudget" name="budget"><option>₹50L–₹1Cr</option><option>₹1Cr–₹2Cr</option></select>
+      <button class="btn-primary" type="submit">Request Quote</button>
+    </form>
+  </main>
+</body>
+</html>
