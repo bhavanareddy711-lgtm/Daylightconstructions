@@ -1,0 +1,88 @@
+/* Daylight Construction - simple responsive stylesheet
+   Clean, accessible, mobile-first design.
+*/
+:root{
+  --brand:#FFB703;
+  --accent:#0B7A75;
+  --dark:#2B2F36;
+  --muted:#6b6f76;
+  --max-width:1100px;
+  --radius:8px;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color-scheme: light;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  color:var(--dark);
+  line-height:1.5;
+  background:#fff;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+.container{max-width:var(--max-width);margin:0 auto;padding:1rem}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.site-header{border-bottom:1px solid #eee;position:sticky;top:0;background:#fff;z-index:60}
+.logo a{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:var(--dark);font-weight:600}
+.brand-text{font-family:Poppins,Inter, sans-serif;font-weight:600}
+.nav ul{list-style:none;margin:0;padding:0;display:flex;gap:1rem}
+.nav a{color:var(--dark);text-decoration:none;padding:.5rem}
+.top-cta{display:flex;gap:.6rem;align-items:center}
+.phone{color:var(--dark);text-decoration:none}
+.mobile-menu{display:none;border:0;background:transparent;font-size:1.2rem}
+
+.hero{position:relative;overflow:hidden}
+.hero img{width:100%;height:420px;object-fit:cover;display:block}
+.hero-inner{position:absolute;left:1rem;bottom:2rem;color:#fff;text-shadow:0 6px 18px rgba(0,0,0,.4);max-width:720px}
+.hero h1{font-size:2rem;margin:.2rem 0}
+.hero .strap{background:rgba(0,0,0,0.35);padding:.1rem .3rem;border-radius:4px}
+.lead{margin:.6rem 0;color:#fff}
+.btn-primary{display:inline-block;background:var(--accent);color:#fff;padding:.7rem 1rem;border-radius:6px;text-decoration:none}
+.btn-secondary{display:inline-block;background:rgba(255,255,255,0.9);color:var(--dark);padding:.6rem .9rem;border-radius:6px;text-decoration:none;margin-left:.4rem}
+.btn-outline{padding:.4rem .6rem;border:1px solid #ddd;border-radius:4px;text-decoration:none;color:var(--dark)}
+
+.trust-strip{display:flex;gap:1rem;margin-top:1rem;padding:0;list-style:none;color:#fff}
+.trust-strip li{background:rgba(0,0,0,0.35);padding:.4rem .6rem;border-radius:6px;font-size:.9rem}
+
+/* sections */
+.section{padding:2rem 0}
+.grid{display:grid;grid-template-columns:repeat(1,1fr);gap:1rem}
+@media(min-width:760px){
+  .grid{grid-template-columns:repeat(3,1fr)}
+  .mobile-menu{display:none}
+  .nav{display:block}
+}
+.service-card, .card, .project-card{border:1px solid #eee;padding:1rem;border-radius:8px;background:#fff}
+.card img, .project-card img{width:100%;height:180px;object-fit:cover;border-radius:6px}
+.card-body{padding:.6rem 0}
+.projects-preview .carousel{display:flex;gap:1rem;overflow:auto;padding-bottom:1rem}
+.how-we-work .steps{display:flex;flex-direction:column;gap:.6rem}
+@media(min-width:760px){
+  .how-we-work .steps{flex-direction:row}
+}
+
+/* contact form */
+.contact-form{max-width:620px}
+.contact-form label{display:block;margin:.6rem 0 .2rem}
+.contact-form input,.contact-form select,.contact-form textarea{width:100%;padding:.6rem;border:1px solid #ddd;border-radius:6px}
+.consent{display:flex;align-items:center;gap:.5rem;margin:.6rem 0}
+
+/* footer */
+.site-footer{background:#fafafa;border-top:1px solid #eee;padding:1rem 0;margin-top:2rem}
+.footer-grid{display:grid;grid-template-columns:1fr;gap:1rem}
+@media(min-width:760px){.footer-grid{grid-template-columns:1fr 1fr 1fr}}
+.site-footer a{color:var(--dark);text-decoration:none}
+
+/* small */
+.muted{color:var(--muted)}
+.link-more{color:var(--accent)}
+
+/* accessibility */
+.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skip-link:focus{position:static;width:auto;height:auto;padding:.5rem;background:#000;color:#fff;z-index:9999}
+
+/* utilities */
+.btn-primary:focus,.btn-secondary:focus{outline:3px solid rgba(11,122,117,.2)}
